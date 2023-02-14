@@ -1,0 +1,31 @@
+server:
+  port : 8081
+
+# Keycloak configuration
+keycloak:
+  # The URL of your Keycloak server's authentication endpoint
+  auth-server-url: http://localhost:8080
+
+  # The name of the Keycloak realm containing your application and users
+  realm: master
+
+  # The ID of the client that represents your application in Keycloak
+  resource: test-app
+
+  # The credentials that allow your application to authenticate with Keycloak
+  credentials:
+    # The client secret that allows your application to authenticate with Keycloak
+    secret: lonyMtP3pFB3UhcPScHz0Lagzs0dJ0uq
+    grantType: client_credentials
+
+  # Specifies whether SSL is required for communication with Keycloak. Set to "external" if SSL is required for external requests.
+  ssl-required: external
+
+  # Specifies whether to use the resource-specific role mappings for the client. If set to "true", Keycloak will use the roles configured in the client's "client-scopes" instead of the realm roles.
+  use-resource-role-mappings: true
+
+logging:
+  level:
+    root: "debug"
+    org.springframework.web: "debug"
+    org.hibernate: "error"

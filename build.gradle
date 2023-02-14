@@ -1,0 +1,49 @@
+plugins {
+  id 'java'
+  id 'org.springframework.boot' version '3.0.2'
+  id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'teaithlucas.test'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+  compileOnly {
+    extendsFrom annotationProcessor
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web-services'
+
+  // https://mvnrepository.com/artifact/org.keycloak.bom/keycloak-adapter-bom
+  implementation group: 'org.keycloak.bom', name: 'keycloak-adapter-bom', version: '20.0.3', ext: 'pom'
+
+  // https://mvnrepository.com/artifact/org.keycloak/keycloak-spring-boot-starter
+  implementation group: 'org.keycloak', name: 'keycloak-spring-boot-starter', version: '20.0.3'
+
+  // https://mvnrepository.com/artifact/org.keycloak/keycloak-admin-client
+  implementation group: 'org.keycloak', name: 'keycloak-admin-client', version: '20.0.3'
+
+  // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+  implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.2'
+
+  // https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api
+  implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2'
+
+  compileOnly group: 'org.projectlombok', name: 'lombok'
+  developmentOnly group: 'org.springframework.boot', name: 'spring-boot-devtools'
+  annotationProcessor group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
+  annotationProcessor group: 'org.projectlombok', name: 'lombok'
+  testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+}
+
+tasks.named('test') {
+  useJUnitPlatform()
+}
