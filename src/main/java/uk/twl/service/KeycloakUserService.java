@@ -1,4 +1,4 @@
-package teawithlucas.test.keycloak.services;
+package uk.twl.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -7,14 +7,12 @@ import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import teawithlucas.test.keycloak.exceptions.DuplicateKeycloakUserException;
-import teawithlucas.test.keycloak.exceptions.KeycloakCommunicationException;
-import teawithlucas.test.keycloak.exceptions.KeycloakUserCreationException;
+import uk.twl.exception.DuplicateKeycloakUserException;
+import uk.twl.exception.KeycloakCommunicationException;
+import uk.twl.exception.KeycloakUserCreationException;
 
 import javax.ws.rs.ProcessingException;
-import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
 import java.util.Collections;
 
 /**

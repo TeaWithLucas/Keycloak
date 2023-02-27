@@ -1,4 +1,4 @@
-package teawithlucas.test.keycloak;
+package uk.twl;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

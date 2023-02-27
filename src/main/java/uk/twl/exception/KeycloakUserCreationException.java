@@ -1,4 +1,4 @@
-package teawithlucas.test.keycloak.exceptions;
+package uk.twl.exception;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 

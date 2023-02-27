@@ -1,4 +1,4 @@
-package teawithlucas.test.keycloak.controllers;
+package uk.twl.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import teawithlucas.test.keycloak.exceptions.KeycloakUserCreationException;
-import teawithlucas.test.keycloak.models.KeycloakUserDto;
-import teawithlucas.test.keycloak.services.KeycloakUserService;
+import uk.twl.exception.KeycloakUserCreationException;
+import uk.twl.model.KeycloakUserDto;
+import uk.twl.service.KeycloakUserService;
 
 /**
  * A controller for managing users in Keycloak.
