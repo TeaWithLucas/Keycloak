@@ -2,12 +2,14 @@ package uk.twl.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
 import lombok.Data;
 
 /**
  * A DTO class representing a user to be added to Keycloak.
  */
 @Data
+@Builder
 public class KeycloakUserDto {
 
     @NotBlank
