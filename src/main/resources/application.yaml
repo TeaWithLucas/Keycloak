@@ -1,6 +1,10 @@
 server:
   port : 8081
 
+spring:
+  application:
+    name: Keycloak-Client
+
 # Keycloak configuration
 keycloak:
   # The URL of your Keycloak server's authentication endpoint
