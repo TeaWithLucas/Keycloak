@@ -20,6 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
 @TestPropertySource(properties = { "spring.application.name=test app name" })
+@DisplayName("Root Controller Integration Tests")
 class RootControllerIntegrationTest {
 
     @Autowired

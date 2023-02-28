@@ -12,6 +12,7 @@ import org.springframework.boot.test.json.JsonContent;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @JsonTest
+@DisplayName("Keycloak User DTO JSON Tests")
 public class KeycloakUserDtoJsonTest {
 
     public static final String USERNAME = "testuser";

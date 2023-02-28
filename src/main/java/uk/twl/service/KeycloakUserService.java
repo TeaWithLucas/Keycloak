@@ -53,12 +53,12 @@ public class KeycloakUserService {
                 }
                 default -> {
                     log.error("Error creating user: status code {}", statusCode);
-                    throw new KeycloakCommunicationException("Error creating user: status code " + statusCode);
+                    throw new KeycloakUserCreationException("Error creating user: status code " + statusCode);
                 }
             }
         } catch (ProcessingException e) {
             log.error("Error creating user in Keycloak", e);
-            throw new KeycloakUserCreationException("Error creating user", e);
+            throw new KeycloakCommunicationException("Error creating user", e);
         }
     }
 

@@ -21,6 +21,7 @@ repositories {
 dependencies {
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web-services'
+  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation'
 
   // https://mvnrepository.com/artifact/org.keycloak.bom/keycloak-adapter-bom
   implementation group: 'org.keycloak.bom', name: 'keycloak-adapter-bom', version: '20.0.3', ext: 'pom'
